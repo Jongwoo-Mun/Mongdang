@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-dim": "#505f00",
+                    "tertiary": "#5b6b00",
+                    "surface-tint": "#776300",
+                    "surface": "#fffbff",
+                    "secondary-dim": "#874800",
+                    "on-tertiary-container": "#516000",
+                    "tertiary-fixed-dim": "#d5ee68",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#7c4100",
+                    "error-dim": "#b92902",
+                    "on-primary-container": "#5b4b00",
+                    "inverse-primary": "#ffd709",
+                    "on-error-container": "#520c00",
+                    "error": "#be2d06",
+                    "primary-fixed-dim": "#efc900",
+                    "secondary-fixed": "#ffc69a",
+                    "primary": "#776300",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e3fd74",
+                    "error-container": "#f95630",
+                    "on-secondary-fixed": "#532a00",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed": "#ffd709",
+                    "on-primary-fixed": "#453900",
+                    "outline": "#878248",
+                    "surface-container": "#fef6a5",
+                    "on-primary-fixed-variant": "#665500",
+                    "on-tertiary-fixed-variant": "#5b6b00",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#a59f61",
+                    "surface-container-highest": "#f3eb91",
+                    "tertiary-container": "#e3fd74",
+                    "on-surface-variant": "#6b662f",
+                    "surface-dim": "#eee686",
+                    "on-tertiary-fixed": "#414d00",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffb375",
+                    "on-secondary-container": "#6f3a00",
+                    "surface-variant": "#f3eb91",
+                    "primary-container": "#ffd709",
+                    "outline-variant": "#c2bb7b",
+                    "on-background": "#3d3905",
+                    "secondary": "#995200",
+                    "secondary-container": "#ffc69a",
+                    "primary-dim": "#695700",
+                    "background": "#fffbff",
+                    "surface-container-low": "#fffae1",
+                    "surface-bright": "#fffbff",
+                    "surface-container-high": "#f9f19b",
+                    "on-surface": "#3d3905",
+                    "inverse-surface": "#100f00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Plus Jakarta Sans"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #fffbff;
+            color: #3d3905;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
+<div class="text-2xl font-black text-zinc-900 dark:text-white tracking-tighter font-['Plus_Jakarta_Sans']">
+                몽당
+            </div>
+<div class="hidden md:flex items-center gap-8 font-['Plus_Jakarta_Sans'] font-bold text-sm tracking-tight">
+<a class="text-yellow-600 dark:text-yellow-400 border-b-2 border-yellow-500 pb-1" href="{{DATA:SCREEN:SCREEN_26}}">Home</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-yellow-500 transition-colors" href="{{DATA:SCREEN:SCREEN_35}}">Catalog</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-yellow-500 transition-colors" href="{{DATA:SCREEN:SCREEN_44}}">Pricing</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-yellow-500 transition-colors" href="{{DATA:SCREEN:SCREEN_23}}">About Us</a>
+<a class="text-zinc-600 dark:text-zinc-400 hover:text-yellow-500 transition-colors" href="{{DATA:SCREEN:SCREEN_33}}">FAQ</a>
+</div>
+<a class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold text-sm hover:opacity-80 transition-all duration-300 scale-95 active:scale-90" href="#">
+                Naver Smart Store
+            </a>
+</div>
+</nav>
+<main class="pt-24 overflow-x-hidden">
+<!-- Hero Section: The Sunlit Concierge -->
+<section class="relative px-6 md:px-12 py-16 md:py-32 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10 text-center lg:text-left">
+<h1 class="text-5xl md:text-7xl font-extrabold tracking-tighter text-on-surface leading-[1.1] mb-6">
+                        여행의 시작, <br/>
+<span class="text-primary italic">가볍게</span> 몽당.
+                    </h1>
+<p class="text-lg md:text-xl text-on-surface-variant font-medium mb-10 max-w-lg mx-auto lg:mx-0">
+                        커리어 대여부터 집 앞 배송, 수거까지. <br/> 
+                        무거운 짐 걱정 없이 설레는 여행에만 집중하세요.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+<button class="bg-primary-container text-on-primary-container px-10 py-5 rounded-lg text-lg font-bold shadow-lg shadow-primary/10 hover:scale-105 transition-transform">
+                            지금 예약하기
+                        </button>
+<button class="bg-surface-container-high text-on-surface px-10 py-5 rounded-lg text-lg font-bold hover:bg-surface-container-highest transition-colors">
+                            이용 가이드
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-20 -right-20 w-80 h-80 bg-primary-container/30 rounded-full blur-3xl -z-10"></div>
+<div class="relative bg-surface-container-low rounded-xl p-4 transform rotate-2 hover:rotate-0 transition-transform duration-500 shadow-xl overflow-visible">
+<img alt="Bright yellow stylish suitcase" class="rounded-lg w-full h-[500px] object-cover shadow-2xl" data-alt="A premium vibrant yellow hard-shell travel suitcase standing on a minimalist wooden floor in a sunlit modern interior with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW0C_fJM45bM5JGZmLMR-fquscgMaajH9YkYaniYJ93C2QzLxh1K0LzR1hbS-k4XMYnMN6UeWHEPvAIDfBIJFFwNe_lm_LXhcaziGJV8dlSe6iWcO5o-xVmVuav_ryOJRQwHz_EVrdamtCZElr1XlK6VnaG0xKLx76OVdebq_PAIDuHo0sfyBcHLMJWkV1-KIoNQuUWy1Qy_qJOjHDfxxtzubLklYqRwNyUyDqtaxbNnageaTGwXsgSWfzyfbzbsGFS2lJCJU0"/>
+<div class="absolute -bottom-10 -left-10 bg-white p-6 rounded-lg shadow-xl max-w-[200px] transform -rotate-3">
+<div class="flex items-center gap-2 mb-2 text-primary">
+<span class="material-symbols-outlined" data-weight="fill">verified</span>
+<span class="text-xs font-bold uppercase tracking-wider">Premium Care</span>
+</div>
+<p class="text-sm font-semibold leading-snug">철저한 소독과 <br/> 세척 프로세스</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Delivery & Return Process: Bento Grid Style -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16 text-center">
+<h2 class="text-4xl font-bold tracking-tight mb-4 text-on-surface">도어 투 도어(Door-to-Door) 서비스</h2>
+<p class="text-on-surface-variant font-medium">복잡한 과정은 몽당이 대신합니다.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">shopping_cart</span>
+</div>
+<span class="text-primary font-bold text-sm mb-2">STEP 01</span>
+<h3 class="text-xl font-bold mb-3">간편 주문</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">온라인에서 원하는 모델과 일정을 선택하세요.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<span class="text-primary font-bold text-sm mb-2">STEP 02</span>
+<h3 class="text-xl font-bold mb-3">집 앞 배송</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">여행 전날까지 안전하게 집 앞으로 배송해 드립니다.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow md:scale-110 md:z-10 md:border-2 md:border-primary-container">
+<div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">flight_takeoff</span>
+</div>
+<span class="text-primary font-bold text-sm mb-2">STEP 03</span>
+<h3 class="text-xl font-bold mb-3">즐거운 여행</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">가벼운 마음으로 여행의 모든 순간을 즐기세요.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-8 rounded-lg flex flex-col items-center text-center shadow-sm hover:shadow-md transition-shadow">
+<div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-3xl">box</span>
+</div>
+<span class="text-primary font-bold text-sm mb-2">STEP 04</span>
+<h3 class="text-xl font-bold mb-3">현관앞 수거</h3>
+<p class="text-sm text-on-surface-variant leading-relaxed">여행 후 문 앞에 두시면 저희가 직접 회수합니다.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Highlight Section: Asymmetric Layout -->
+<section class="py-24 max-w-7xl mx-auto px-6 overflow-hidden">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="relative rounded-lg overflow-hidden group">
+<img alt="Luxury travel scene" class="w-full h-[600px] object-cover rounded-lg group-hover:scale-105 transition-transform duration-700" data-alt="Modern high-end travel scene with luxury carry-on luggage on a marble floor in a bright minimalist airport lounge" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU8RGiw9TnkuRcgo0uvUU2Ca8P7HoZ3W3M1tuRibDpFViz9fChEJtDscnvKwkoL5cJk_WdV85tpOBoUFGsmN4bGMRbAVtJZEP1kTz2azvVW_UVaL547cK7vHIFORLIJcvlWNrF2eFDJLM0GurMdONes0ayIiMqY5_hY0zccZ6WDp1WU4dK9JWhROtXlQDYU0eMU6x3mgGcNWdbrKnGS-KH21_HOXyysjHdNKKS1uSTfr8yN3i-h-j9yH_Yg3btHJsQIMy6cxa0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+<div class="absolute bottom-8 left-8 text-white">
+<p class="text-2xl font-bold">The Premium Collection</p>
+<p class="text-white/80">당신의 취향에 맞는 최고의 선택</p>
+</div>
+</div>
+<!-- Floating Badge -->
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-secondary rounded-full flex flex-col items-center justify-center text-white p-4 text-center transform rotate-12">
+<p class="text-xs font-bold uppercase tracking-widest">Starting at</p>
+<p class="text-xl font-black">₩9,900</p>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="text-4xl font-extrabold tracking-tight mb-8 leading-tight">품격 있는 여행을 위한 <br/> 프리미엄 라인업</h2>
+<ul class="space-y-8">
+<li class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">리모와 등 명품 브랜드 보유</h4>
+<p class="text-on-surface-variant">구입하기엔 부담스러운 고가의 명품 캐리어들을 합리적인 가격에 경험하세요.</p>
+</div>
+</li>
+<li class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">clean_hands</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">3단계 살균/세척 시스템</h4>
+<p class="text-on-surface-variant">매 회 수거 후 고온 스팀과 자외선 살균으로 신품급 청결도를 유지합니다.</p>
+</div>
+</li>
+<li class="flex gap-6 items-start">
+<div class="flex-shrink-0 w-12 h-12 bg-surface-container-high rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<div>
+<h4 class="text-xl font-bold mb-2">파손 전액 보상 제도</h4>
+<p class="text-on-surface-variant">부주의한 사고나 항공사 과실 파손 걱정 없이 안심하고 대여하세요.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Testimonials: Cards -->
+<section class="py-24 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="text-4xl font-bold tracking-tight mb-2">이용자들의 솔직한 후기</h2>
+<p class="text-on-surface-variant">몽당과 함께한 12,000+ 명의 여행자들</p>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="bg-surface-container-low p-8 rounded-lg relative">
+<span class="material-symbols-outlined text-primary-container text-6xl absolute top-4 right-4 opacity-30">format_quote</span>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<p class="text-on-surface font-medium leading-relaxed mb-6">
+                            "가족 여행 갈 때 큰 캐리어가 필요했는데, 보관 장소도 마땅치 않아 대여했어요. 집 앞으로 바로 오니까 정말 편하네요!"
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-zinc-200"></div>
+<div>
+<p class="text-sm font-bold">김*민</p>
+<p class="text-xs text-on-surface-variant">제주도 3박 4일 여행</p>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-low p-8 rounded-lg relative">
+<span class="material-symbols-outlined text-primary-container text-6xl absolute top-4 right-4 opacity-30">format_quote</span>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<p class="text-on-surface font-medium leading-relaxed mb-6">
+                            "리모와 캐리어 꼭 써보고 싶었는데 몽당 덕분에 저렴하게 잘 썼어요. 상태도 너무 깨끗해서 새 제품인 줄 알았습니다."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-zinc-200"></div>
+<div>
+<p class="text-sm font-bold">이*준</p>
+<p class="text-xs text-on-surface-variant">파리 7박 9일 출장</p>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-low p-8 rounded-lg relative">
+<span class="material-symbols-outlined text-primary-container text-6xl absolute top-4 right-4 opacity-30">format_quote</span>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<p class="text-on-surface font-medium leading-relaxed mb-6">
+                            "수거 서비스가 진짜 대박이에요. 여행 다녀와서 녹초가 됐는데 그냥 문 앞에 던져두면 끝이니까 너무 만족스럽습니다."
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-zinc-200"></div>
+<div>
+<p class="text-sm font-bold">박*혜</p>
+<p class="text-xs text-on-surface-variant">도쿄 2박 3일 여행</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-24">
+<div class="max-w-7xl mx-auto px-6">
+<div class="bg-primary rounded-lg p-12 md:p-24 text-center text-white relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="absolute top-10 left-10 w-32 h-32 border-4 border-white rounded-full"></div>
+<div class="absolute bottom-10 right-10 w-64 h-64 border-4 border-white rounded-full"></div>
+</div>
+<h2 class="text-4xl md:text-6xl font-black mb-8 leading-tight font-headline tracking-tighter">다음 여행은 <br/> 더 가볍게 떠나세요.</h2>
+<p class="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto font-medium">지금 첫 대여 시 10% 할인 쿠폰을 드립니다.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a class="bg-white text-primary px-12 py-5 rounded-lg text-xl font-bold hover:scale-105 transition-transform" href="#">네이버 스토어로 이동</a>
+<a class="bg-black/20 text-white backdrop-blur-sm px-12 py-5 rounded-lg text-xl font-bold hover:bg-black/30 transition-colors" href="#">실시간 상담하기</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[2rem] mt-20 bg-zinc-50 dark:bg-zinc-950">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 gap-6 max-w-7xl mx-auto">
+<div class="text-center md:text-left">
+<div class="text-xl font-bold text-zinc-800 dark:text-zinc-200 mb-2">몽당</div>
+<p class="text-zinc-500 dark:text-zinc-500 font-['Be_Vietnam_Pro'] text-xs font-medium">© 2023 Mongdang. All rights reserved.</p>
+</div>
+<div class="flex gap-8 font-['Be_Vietnam_Pro'] text-xs font-medium">
+<a class="text-zinc-500 dark:text-zinc-500 hover:text-yellow-500 underline-offset-4 hover:underline opacity-100 hover:opacity-70 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-zinc-500 dark:text-zinc-500 hover:text-yellow-500 underline-offset-4 hover:underline opacity-100 hover:opacity-70 transition-opacity" href="#">Terms of Service</a>
+<a class="text-zinc-500 dark:text-zinc-500 hover:text-yellow-500 underline-offset-4 hover:underline opacity-100 hover:opacity-70 transition-opacity" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-zinc-200 flex items-center justify-center hover:bg-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-zinc-200 flex items-center justify-center hover:bg-primary-container transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+</footer>
+</body></html>
